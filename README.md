@@ -35,6 +35,7 @@ In these experiments, I am looking how to do:
  * Templates - Rendering spiffy websites with metrics
  * Client Libs/Tools - grunt, gulp, bower toolsets
  * Deploy tools - fab, cap, min
+ * Test tools - RSpec, Mocha
  * Other MFs
    * [Spark](http://sparkjava.com/) in Java or Groovy
    * [Nancy](http://nancyfx.org/) in C# or PowerShell
