@@ -2,11 +2,19 @@
 use Dancer2;
 
 get '/' => sub {
-  return 'Hello World!';
+  return "Hello World!\n";
+};
+
+# get '/hello' => sub {
+#   return "Hello World!\n";
+# };
+
+get qr{/hello/?} => sub {
+  return "Hello World!\n";
 };
 
 get '/hello/:name' => sub {
-    return "Why, hello there " . params->{name};
+    return "Why, Hello " . params->{name} . "\n";
 };
 
 start;
