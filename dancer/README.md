@@ -1,10 +1,10 @@
 
-# Installing
+## Installing
 
-## OS X
+### OS X
 
 * Install XCode Command Line Tools
-* Install Brew
+* Install Brew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 ```bash
 brew update
@@ -13,17 +13,17 @@ brew install perl
 brew link perl --force
 # check paths are /usr/local/Cellar/perl/
 perl -E '$"="\n"; say "@INC"'
-# assuming paths are correct
+# assuming paths are correct - Install Dancer2 library
 curl -L http://cpanmin.us | perl - --sudo Dancer2
 ```
 
-# Running
+## Running
 
 ```bash
 perl bin/app.pl &
 ```
 
-# Testing
+## Testing
 
 ```bash
 # check to see if running on port 3000
