@@ -10,11 +10,11 @@
 brew update
 brew upgrade
 brew install node
-npm install        # Install Express library
 ```
 
 ## Running
 
 ```bash
-npm start
+npm install        # Install Express library
+npm start          # Start Server
 ```

@@ -1,7 +1,7 @@
 
 ## Installing
 
-### OS X Like A Boss w/ RVM
+### Install Using RVM (OS X)
 
 * Install XCode Command Line Tools
 * Install Brew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -15,11 +15,11 @@ source ~/.profile
 rvm install 2.3.0
 rvm default 2.3.0
 gem install bundler
-bundle install  # install Sinatra library
 ```
 
 ## Running
 
-```
-rackup
+```bash
+bundle install      # install Sinatra library
+rackup              # start server
 ```

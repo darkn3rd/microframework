@@ -13,14 +13,15 @@ brew install perl
 brew link perl --force
 # check paths are /usr/local/Cellar/perl/
 perl -E '$"="\n"; say "@INC"'
-# assuming paths are correct - Install Dancer2 library
-curl -L http://cpanmin.us | perl - --sudo Dancer2
 ```
 
 ## Running
 
 ```bash
-perl bin/app.pl &
+# Install Dancer2 library
+curl -L http://cpanmin.us | perl - --sudo Dancer2
+# Run Server
+./app.pl &
 ```
 
 ## Testing
