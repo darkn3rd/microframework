@@ -29,3 +29,14 @@ In these experiments, I am looking how to do:
  * [Flask](http://flask.pocoo.org/) (Python)
    * [pip](http://python-packaging-user-guide.readthedocs.org/en/latest/installing/)
    * [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/)
+
+## Future Ideas
+
+ * Templates - Rendering spiffy websites with metrics
+ * Client Libs/Tools - grunt, gulp, bower toolsets
+ * Deploy tools - fab, cap, min
+ * Other MFs
+   * [Spark](http://sparkjava.com/) in Java or Groovy
+   * [Nancy](http://nancyfx.org/) in C# or PowerShell
+ * Containers, Virtualization - docker, rkt, vagrant, otto
+ * Dev environments on other OSes (ugh, Windows..., ugh)
