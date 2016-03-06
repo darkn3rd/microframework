@@ -5,10 +5,17 @@ const express = require('express');
 // Constants
 const PORT = 8080;
 
-// App
+// Application
 const app = express();
-app.get('/', function (req, res) {
-  res.send('Hello world\n');
+
+// Multiple Route Scenario
+app.get(['/', '/hello'], function (req, res) {
+  res.send('Hello world!\n');
+});
+
+// Dynamic Route Scenario
+app.get('/hello/:username', function(req , res){
+  res.send("Why Hello " + req.params.username);
 });
 
 app.listen(PORT);
