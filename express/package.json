@@ -1,0 +1,13 @@
+{
+  "name": "express_hello_world",
+  "version": "1.0.0",
+  "description": "Express Hello World",
+  "author": "Joaquin Menchaca <suavecali@yahoo.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
