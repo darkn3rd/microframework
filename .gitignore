@@ -23,6 +23,8 @@ gradle-app.setting
 # MONO
 ################
 packages
+*.exe
+libs
 
 # OS X Junk
 ################
