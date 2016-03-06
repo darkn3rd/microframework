@@ -2,3 +2,10 @@
 # NODE
 node_modules
 npm-debug.log
+
+# MAVEN
+target
+*.class
+*.jar
+*.war
+*.ear
