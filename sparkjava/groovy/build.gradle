@@ -1,0 +1,13 @@
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = 'Service'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.5'
+    compile 'com.sparkjava:spark-core:2.3'
+}

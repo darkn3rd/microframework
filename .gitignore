@@ -1,11 +1,22 @@
 
 # NODE
+################
+
 node_modules
 npm-debug.log
 
 # MAVEN
+################
 target
 *.class
 *.jar
 *.war
 *.ear
+
+# GRADLE
+################
+build
+.gradle
+!gradle-wrapper.jar
+gradle-app.setting
+.gradletasknamecache
