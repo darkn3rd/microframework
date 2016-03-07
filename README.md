@@ -16,7 +16,7 @@ These are in brainstorm mode, but basically, you can explore areas of testing an
  - Segregation
    - System - [AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), [Packer](https://www.packer.io/), [VeeWee](https://github.com/jedi4ever/veewee), [Vagrant](https://www.vagrantup.com/)
    - Application - [Docker](https://www.docker.com/), [Rkt](https://coreos.com/rkt/)
- - Testing - [unit tests](http://artofunittesting.com/definition-of-a-unit-test/), [TDD](http://agiledata.org/essays/tdd.html), [BDD](http://dannorth.net/introducing-bdd/), (Capybara)[https://github.com/jnicklas/capybara], [Zombie](http://zombie.js.org/)
+ - Testing - [unit tests](http://artofunittesting.com/definition-of-a-unit-test/), [TDD](http://agiledata.org/essays/tdd.html), [BDD](http://dannorth.net/introducing-bdd/), [Capybara](https://github.com/jnicklas/capybara), [Zombie](http://zombie.js.org/)
 ]
 ## Functional Stuff
 
@@ -48,13 +48,3 @@ In these experiments, I am looking how to do:
    * [Apache Maven](https://maven.apache.org/)
  * [Nancy](http://nancyfx.org/) (C#)
    * [Mono](http://www.mono-project.com/)
-
-
-## Future Ideas
-
- * Templates - Rendering spiffy websites with metrics
- * Client Libs/Tools - grunt, gulp, bower toolsets
- * Deploy tools - fab, cap, min
- * Test tools - RSpec, Mocha
- * Containers, Virtualization - docker, rkt, vagrant, otto
- * Dev environments on other OSes (ugh, Windows..., ugh)

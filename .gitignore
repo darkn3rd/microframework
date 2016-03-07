@@ -24,6 +24,7 @@ gradle-app.setting
 ################
 packages
 *.exe
+*.dll
 bin
 
 # OS X Junk
