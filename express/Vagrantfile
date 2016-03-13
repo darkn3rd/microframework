@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  # config.vm.synced_folder ".", "/home/vagrant/app", type: "rsync",
+  #   rsync__exclude: ["node_modules/", "npm-debug.log"]
+  config.vm.synced_folder ".", "/vagrant", disabled: false
+
+  config.vm.provision "docker" do |docker|
+    docker.build_image "/vagrant", args: "-t vagrant/express-web"
+    docker.run "vagrant/express-web" , args: "-p 8080:8080"
+  end
+end
