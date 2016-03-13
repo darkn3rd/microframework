@@ -50,6 +50,7 @@ eval "$(docker-machine env toolbox)"
 
 ```bash
 $ docker build -t mywebapp .
+$ # Check Status of Built Image
 $ docker images mywebapp
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 mywebapp            latest              23c631168326        8 minutes ago       647.8 MB
@@ -59,18 +60,21 @@ mywebapp            latest              23c631168326        8 minutes ago       
 ## **Run Container**
 
 ```bash
-$ docker run -p 49160:8080 -d mywebapp
+$ docker run -p 8080:8080 -d mywebapp
+$ # Check Status of Running Container
 $ docker ps | grep -E 'CONTAINER|mywebapp'
 CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS              PORTS                                           NAMES
 d597e8811d0e        mywebapp                  "npm start"              10 seconds ago      Up 9 seconds        0.0.0.0:8080->8080/tcp                          grave_williams
-$ docker port $(docker ps | grep mywebapp | grep -o '\w*$')
-8080/tcp -> 0.0.0.0:8080
 ```
 
 ## **View Results**
 
 ### **On Linux**
-If you are on a Linux system where the container is running the container locally, you can simply: `curl -i localhost:8080`
+If you are on a Linux system where the container is running the container locally, you can simply:
+
+```bash
+$ curl -i localhost:8080
+```
 
 ### **With Docker Machine**
 
@@ -78,9 +82,11 @@ With Docker Machine, it is more complex, because the ports are not exposed to lo
 
 On a Mac OS X, running Docker Machine, you can do the following:
 ```bash
+$ # fetch guest machine IP and published port of web service
 $ DOCKER_MACHINE_IP=$(docker-machine ip ${DOCKER_MACHINE_NAME})
 $ CONTAINER_NAME=$(docker ps | grep mywebapp | grep -o '\w*$')
 $ EXPOSED_PORT=$(docker port ${CONTAINER_NAME} | grep '8080/tcp' | cut -d: -f2)
+$ # test web client given IP and Port
 $ curl -i ${DOCKER_MACHINE_IP}:${EXPOSED_PORT}
 HTTP/1.1 200 OK
 X-Powered-By: Express
