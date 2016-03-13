@@ -119,7 +119,7 @@ $ WEB_IP=$(docker-machine ip ${DOCKER_MACHINE_NAME})
 ### **Build and Run**
 
 ```bash
-$ docker-compose up -d up
+$ docker-compose up -d
 $ # Test Results (see below)
 $ docker-compose stop
 ```

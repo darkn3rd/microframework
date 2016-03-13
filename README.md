@@ -4,7 +4,9 @@ The web micro-frameworks like Sinatra are fun and easy to use.  You can rapidly 
 
 ## **Goal**
 
-This goal for this project it to create simple *Hello World* applications that can be used as a template to create more robust projects.  In going through these mini-projects, you can learn how to basics of the language platform and toolset in addition to the web micro-framework.
+Create simple `Hello <% name %>` web application for local development play.  Nothing robust.
+
+Added Docker & Vagrant tooling for easy bootstrapping with either `vagrant up` or `docker-compose up -d` commands.
 
 ## **Functional Stuff**
 
@@ -16,13 +18,6 @@ In these experiments, I am looking how to do:
    * regex routes
  * dynamic route (variable)
 
-## **Docker and Vagrant**
-
-Some of the projects will support both [Docker](https://www.docker.com/) and [Vagrant](https://www.vagrantup.com).  As an alternative to running these directly on your host system you can use either [Docker](https://www.docker.com/) or [Vagrant](https://www.vagrantup.com).  
-
-With [Vagrant](https://www.vagrantup.com), on all systems ([Debian](https://www.debian.org/), [CentOS](https://www.centos.org/), [Mac OS X](http://www.apple.com/osx/), [Windows](https://www.microsoft.com/en-us/windows)), you can start up the services with `vagrant up`.  
-
-[Docker](https://www.docker.com/) is more complicated, so more instructions provided *build* and *run* the container.  On [Mac OS X](http://www.apple.com/osx/) and [Windows](https://www.microsoft.com/en-us/windows), you will need [Docker Machine](https://docs.docker.com/machine/) to run [Docker](https://www.docker.com/).
 
 ## **Platforms & Tools**
 
@@ -36,16 +31,3 @@ With [Vagrant](https://www.vagrantup.com), on all systems ([Debian](https://www.
 [Spark](http://sparkjava.com/)       | [Java](https://java.com/en/download/) ([JVM](https://java.com/en/download/))                       | [Apache Maven](https://maven.apache.org/)  
 [Spark](http://sparkjava.com/)       | [Groovy](http://www.groovy-lang.org/) ([JVM](https://java.com/en/download/))                       | [Gradle](http://gradle.org/)  
 [Nancy](http://nancyfx.org/)         | [C#](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx) ([CLR](http://www.mono-project.com/)) | [Mono](http://www.mono-project.com/), [Nuget](https://www.nuget.org/)  
-
-
-## **Follow On Project Ideas**
-
-These are in brainstorm mode, but basically, you can explore areas of testing and delivery of the web code.  Here's some ideas:
-
-- Deployment Tools - [mina](http://nadarei.co/mina/), [capistrano](http://capistranorb.com/), [fabric](http://www.fabfile.org/), [mcollective](https://puppetlabs.com/mcollective)
-- Change Configuration - [cfengine](https://cfengine.com/), [chef](https://www.chef.io/), [puppet](https://puppetlabs.com/), [ansible](https://www.ansible.com/), [salt](http://saltstack.com/)
-- Robust Web Servers - [Apache](https://httpd.apache.org/), [Nginx](https://www.nginx.com/)
-- Segregation
-  - System - [AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), [Packer](https://www.packer.io/), [VeeWee](https://github.com/jedi4ever/veewee), [Vagrant](https://www.vagrantup.com/)
-  - Application - [Docker](https://www.docker.com/), [Rkt](https://coreos.com/rkt/)
-- Testing - [unit tests](http://artofunittesting.com/definition-of-a-unit-test/), [TDD](http://agiledata.org/essays/tdd.html), [BDD](http://dannorth.net/introducing-bdd/), [Capybara](https://github.com/jnicklas/capybara), [Zombie](http://zombie.js.org/)
