@@ -12,6 +12,10 @@ target
 *.war
 *.ear
 
+# RUBY
+################
+Gemfile.lock
+
 # GRADLE
 ################
 build
@@ -24,7 +28,12 @@ gradle-app.setting
 ################
 packages
 *.exe
+*.dll
 bin
+
+# Vagrant
+################
+.vagrant
 
 # OS X Junk
 ################
