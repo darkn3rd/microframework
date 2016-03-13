@@ -18,7 +18,11 @@ In these experiments, I am looking how to do:
 
 ## **Docker and Vagrant**
 
-Some of the projects will support both Docker and Vagrant.  You can use **Docker Machine** or **Vagrant** to run these in a Linux guest system, or run them locally your host system.
+Some of the projects will support both [Docker](https://www.docker.com/) and [Vagrant](https://www.vagrantup.com).  As an alternative to running these directly on your host system you can use either [Docker](https://www.docker.com/) or [Vagrant](https://www.vagrantup.com).  
+
+With [Vagrant](https://www.vagrantup.com), on all systems ([Debian](https://www.debian.org/), [CentOS](https://www.centos.org/), [Mac OS X](http://www.apple.com/osx/), [Windows](https://www.microsoft.com/en-us/windows)), you can start up the services with `vagrant up`.  
+
+[Docker](https://www.docker.com/) is more complicated, so more instructions provided *build* and *run* the container.  On [Mac OS X](http://www.apple.com/osx/) and [Windows](https://www.microsoft.com/en-us/windows), you will need [Docker Machine](https://docs.docker.com/machine/) to run [Docker](https://www.docker.com/).
 
 ## **Platforms & Tools**
 
