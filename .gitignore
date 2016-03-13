@@ -12,6 +12,10 @@ target
 *.war
 *.ear
 
+# RUBY
+################
+Gemfile.lock
+
 # GRADLE
 ################
 build
