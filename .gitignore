@@ -27,6 +27,10 @@ packages
 *.dll
 bin
 
+# Vagrant
+################
+.vagrant
+
 # OS X Junk
 ################
 .DS_store
