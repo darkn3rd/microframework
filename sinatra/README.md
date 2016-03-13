@@ -1,7 +1,13 @@
+# **Sinatra WebMF*
 
-## Installing
+## **Using on Mac OS X Host**
 
-### Install Using RVM (OS X)
+* Prerequisites:
+  * Install XCode Command Line Tools
+  * Install Brew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+
+### **Install Using RVM (OS X)**
 
 * Install XCode Command Line Tools
 * Install Brew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -17,19 +23,35 @@ rvm default 2.3.0
 gem install bundler
 ```
 
-## Running
+## **Run**
 
 ```bash
 bundle install      # install Sinatra library
-rackup              # start server
+rackup              # start server via Rack
 ```
+## **Using Docker or Vagrant**
 
+See [Tools Readme](../TOOLS.md) for more information on install, setup, and start Docker or Vagrant.
 
-## Testing
+### **Build and Run with Docker Compose**
 
 ```bash
-WEB_IP=${WEB_IP:-localhost}
-$ curl -i ${WEB_IP}:5000
+$ docker-compose up -d
+```
+
+### **Build and Run with Vagrant**
+
+```bash
+$ vagrant up
+```
+
+## **Testing**
+
+```bash
+$ [ -z ${DOCKER_MACHINE_NAME} ] || WEBSERVER=$(docker-machine ip ${DOCKER_MACHINE_NAME})
+$ WEBSERVER=${WEBSERVER:-localhost}
+$ PORT=3000
+$ curl -i ${WEBSERVER}:${PORT}
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 Content-Length: 14
@@ -39,8 +61,4 @@ X-Frame-Options: SAMEORIGIN
 Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
 Date: Sun, 13 Mar 2016 18:24:16 GMT
 Connection: Keep-Alive
-
-Hello, world!
-$ curl ${WEB_IP}:3000/hello/James
-Why Hello James!
 ```

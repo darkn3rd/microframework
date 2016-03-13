@@ -2,13 +2,6 @@
 
 Dump of ideas to discard or use later.
 
-## **Docker and Vagrant**
-
-Some of the projects will support both [Docker](https://www.docker.com/) and [Vagrant](https://www.vagrantup.com).  As an alternative to running these directly on your host system you can use either [Docker](https://www.docker.com/) or [Vagrant](https://www.vagrantup.com).  
-
-With [Vagrant](https://www.vagrantup.com), on all systems ([Debian](https://www.debian.org/), [CentOS](https://www.centos.org/), [Mac OS X](http://www.apple.com/osx/), [Windows](https://www.microsoft.com/en-us/windows)), you can start up the services with `vagrant up`.  
-
-[Docker](https://www.docker.com/) is more complicated, so more instructions provided *build* and *run* the container.  On [Mac OS X](http://www.apple.com/osx/) and [Windows](https://www.microsoft.com/en-us/windows), you will need [Docker Machine](https://docs.docker.com/machine/) to run [Docker](https://www.docker.com/).
 
 ## **Follow On Project Ideas**
 
@@ -21,6 +14,24 @@ These are in brainstorm mode, but basically, you can explore areas of testing an
   - System - [AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), [Packer](https://www.packer.io/), [VeeWee](https://github.com/jedi4ever/veewee), [Vagrant](https://www.vagrantup.com/)
   - Application - [Docker](https://www.docker.com/), [Rkt](https://coreos.com/rkt/)
 - Testing - [unit tests](http://artofunittesting.com/definition-of-a-unit-test/), [TDD](http://agiledata.org/essays/tdd.html), [BDD](http://dannorth.net/introducing-bdd/), [Capybara](https://github.com/jnicklas/capybara), [Zombie](http://zombie.js.org/)
+
+## **Docker Notes**
+
+
+```bash
+$ # Check Status of Built Image
+$ docker images mywebapp
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+mywebapp            latest              23c631168326        8 minutes ago       647.8 MB
+$ # Check Status of Running Container
+$ docker ps | grep -E 'CONTAINER|mywebapp'
+CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS              PORTS                                           NAMES
+d597e8811d0e        mywebapp                  "npm start"              10 seconds ago      Up 9 seconds        0.0.0.0:8080->8080/tcp                          grave_williams
+$ # Fetch Port if Port was not specified
+$ CONTAINER_NAME=$(docker ps | grep mywebapp | grep -o '\w*$')
+$ PORT=$(docker port ${CONTAINER_NAME} | grep '8080/tcp' | cut -d: -f2)
+```
+
 
 ## **Links**
 
