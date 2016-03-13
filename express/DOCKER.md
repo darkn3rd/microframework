@@ -74,20 +74,6 @@ If you are on a Linux system where the container is running the container locall
 
 ```bash
 $ curl -i localhost:8080
-```
-
-### **With Docker Machine**
-
-With Docker Machine, it is more complex, because the ports are not exposed to localhost, but to the active docker machine's ip address.
-
-On a Mac OS X, running Docker Machine, you can do the following:
-```bash
-$ # fetch guest machine IP and published port of web service
-$ DOCKER_MACHINE_IP=$(docker-machine ip ${DOCKER_MACHINE_NAME})
-$ CONTAINER_NAME=$(docker ps | grep mywebapp | grep -o '\w*$')
-$ EXPOSED_PORT=$(docker port ${CONTAINER_NAME} | grep '8080/tcp' | cut -d: -f2)
-$ # test web client given IP and Port
-$ curl -i ${DOCKER_MACHINE_IP}:${EXPOSED_PORT}
 HTTP/1.1 200 OK
 X-Powered-By: Express
 Content-Type: text/html; charset=utf-8
@@ -97,4 +83,37 @@ Date: Sat, 12 Mar 2016 19:36:31 GMT
 Connection: keep-alive
 
 Hello world!
+$ curl localhost:8080/hello/Jane
+Why, Hello Jane!
+
+```
+
+### **With Docker Machine**
+
+With Docker Machine, it is more complex, because the ports are not exposed to localhost, but to the active docker machine's ip address.
+
+On a Mac OS X, running Docker Machine, you can do the following:
+
+```bash
+$ DOCKER_GUEST_IP=$(docker-machine ip ${DOCKER_MACHINE_NAME})
+$ curl -i ${DOCKER_GUEST_IP}:8080
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 13
+ETag: W/"d-WcoO+p9WM8sDcbvANVR42A"
+Date: Sat, 12 Mar 2016 19:36:31 GMT
+Connection: keep-alive
+
+Hello world!
+$ curl ${DOCKER_GUEST_IP}:8080/hello/Jane
+Why, Hello Jane!
+```
+
+Note that if the port was assigned dynamically, we could get the port using `docker ps`:
+
+```bash
+$ CONTAINER_NAME=$(docker ps | grep mywebapp | grep -o '\w*$')
+$ PORT=$(docker port ${CONTAINER_NAME} | grep '8080/tcp' | cut -d: -f2)
+$ curl -i $(docker-machine ip ${DOCKER_MACHINE_NAME}):${PORT}
 ```

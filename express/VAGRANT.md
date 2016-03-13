@@ -38,7 +38,7 @@ $ vagrant up
 
 
 ```bash
-$ curl -i -i localhost:8080
+$ curl -i localhost:8080
 HTTP/1.1 200 OK
 X-Powered-By: Express
 Content-Type: text/html; charset=utf-8
@@ -48,4 +48,6 @@ Date: Sat, 12 Mar 2016 19:36:31 GMT
 Connection: keep-alive
 
 Hello world!
+$ curl localhost:8080/hello/Jane
+Why, Hello Jane!
 ```

@@ -15,7 +15,7 @@ app.get(['/', '/hello'], function (req, res) {
 
 // Dynamic Route Scenario
 app.get('/hello/:username', function(req , res){
-  res.send("Why, Hello " + req.params.username + '\n');
+  res.send("Why, Hello " + req.params.username + '!\n');
 });
 
 app.listen(PORT);
