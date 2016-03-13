@@ -1,9 +1,12 @@
-#!/usr/bin ruby
+#!/usr/bin/env ruby
 # app.rb
 require 'sinatra'
 require "sinatra/multi_route"
 
-#, %r{/hello/?}
+# Override Defaults
+set :port, 3000      # WEBrick=4567,
+set :bind, '0.0.0.0' # WEBrick=localhost
+
 class HelloWorldApp < Sinatra::Base
   register Sinatra::MultiRoute
   get '/', '/hello', '/hello/' do
