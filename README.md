@@ -24,7 +24,7 @@ Some of the projects will support both Docker and Vagrant.  You can use **Docker
 
 
  Microframework                      | Language (Platform)                                                                                 | Tools  
-:-------------------------------------|:----------------------------------------------------------------------------------------------------:|--------
+:-------------------------------------|----------------------------------------------------------------------------------------------------|--------
 [Dancer](http://perldancer.org/)     | [Perl](https://www.perl.org/)                                                                      | [cpanmin](https://www.linode.com/docs/applications/development/manage-cpan-modules-with-cpan-minus)  
 [Sinatra](http://www.sinatrarb.com/) | [Ruby](https://www.ruby-lang.org/)                                                                 | [rvm](https://rvm.io/), [bundler](http://bundler.io/), [Gemfile](http://bundler.io/gemfile.html), [rack](http://rack.github.io/)  
 [Express](http://expressjs.com/)     | [NodeJS](https://nodejs.org/)                                                                      | [npm](https://www.npmjs.com/), [package.json](https://docs.npmjs.com/files/package.json)  
