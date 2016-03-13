@@ -89,3 +89,53 @@ Hello World!
 $ curl 192.168.99.102:5000/hello/Ralph
 Why Hello Ralph!
 ```
+
+# **Using Fig (Docker Compose)**
+
+### **Install**
+
+#### **Mac OS X or Windows**
+  * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+  * [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
+
+#### **Linux**
+  * Docker Engine
+    * From Internet: `curl -fsSL https://get.docker.com/ | sh`
+    * From Repository: https://docs.docker.com/engine/installation/
+  * Docker Compose
+    1. Install python and pip
+    * Install Docker Compose: `pip install docker-compose`
+
+### **Setup**
+On Windows or Mac OS X, you can use [Docker Machine](https://docs.docker.com/machine/).
+
+#### **Mac OS X**
+```bash
+$ docker-machine create -d virtualbox toolbox
+$ eval "$(docker-machine env toolbox)"
+$ WEB_IP=$(docker-machine ip ${DOCKER_MACHINE_NAME})
+```
+
+### **Build and Run**
+
+```bash
+$ docker-compose up -d up
+$ # Test Results (see below)
+$ docker-compose stop
+```
+
+## **Testing Results**
+
+```bash
+WEB_IP=${WEB_IP:-localhost}
+$ curl -i ${WEB_IP}:5000
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 13
+Server: Werkzeug/0.11.4 Python/2.7.11
+Date: Sun, 13 Mar 2016 07:02:41 GMT
+
+Hello World!
+$ curl 192.168.99.102:5000/hello/Ralph
+Why Hello Ralph!
+```
