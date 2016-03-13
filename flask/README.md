@@ -127,7 +127,7 @@ $ docker-compose stop
 ## **Testing Results**
 
 ```bash
-WEB_IP=${WEB_IP:-localhost}
+$ WEB_IP=${WEB_IP:-localhost}
 $ curl -i ${WEB_IP}:5000
 HTTP/1.0 200 OK
 Content-Type: text/html; charset=utf-8
@@ -136,6 +136,6 @@ Server: Werkzeug/0.11.4 Python/2.7.11
 Date: Sun, 13 Mar 2016 07:02:41 GMT
 
 Hello World!
-$ curl 192.168.99.102:5000/hello/Ralph
+$ curl ${WEB_IP}:5000/hello/Ralph
 Why Hello Ralph!
 ```
