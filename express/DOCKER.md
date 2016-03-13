@@ -80,7 +80,7 @@ On a Mac OS X, running Docker Machine, you can do the following:
 ```bash
 $ DOCKER_MACHINE_IP=$(docker-machine ip ${DOCKER_MACHINE_NAME})
 $ CONTAINER_NAME=$(docker ps | grep mywebapp | grep -o '\w*$')
-$ EXPOSED_PORT=$(docker port ${CONTAINER_NAME} | grep '80/tcp' | cut -d: -f2)
+$ EXPOSED_PORT=$(docker port ${CONTAINER_NAME} | grep '8080/tcp' | cut -d: -f2)
 $ curl -i ${DOCKER_MACHINE_IP}:${EXPOSED_PORT}
 HTTP/1.1 200 OK
 X-Powered-By: Express
