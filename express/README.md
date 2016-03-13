@@ -1,12 +1,12 @@
-# *ExpressJS Web MF*
+# **ExpressJS Web MF**
 
-## *Using on Localhost*
+## **Using on Localhost**
 
 This should work wherever you have compilers, command line tools, and NodeJS installed.
 
-### *Installing*
+### **Installing**
 
-#### *OS X*
+#### **OS X**
 
 * **Install Compiler**: XCode Command Line Tools (developer.apple.com)
 * **Install Favorite Package Manager**:
@@ -17,17 +17,17 @@ This should work wherever you have compilers, command line tools, and NodeJS ins
   brew install node
   ```
 
-### *Running*
+### **Running**
 
 ```bash
 npm install        # Install Express library
 npm start          # Start Server
 ```
 
-## *Using on Docker*
+## **Using on Docker**
 
 See [Docker Readme](DOCKER.md)
 
-## *Using on Vagrant*
+## **Using on Vagrant**
 
 See [Vagrant Readme](VAGRANT.md)

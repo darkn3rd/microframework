@@ -2,7 +2,7 @@
 
 ## **Install**
 
-On Mac OS X or Windows, install the following:
+On Mac OS X, Windows, or Linux, install the following:
    * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
    * [Vagrant](https://www.vagrantup.com/)
 
@@ -17,7 +17,7 @@ brew cask install vagrant
 
 ### **Install on Windows (Optional)**
 
-if you are feeling adventurous, you can use [Chocolately](https://chocolatey.org/):
+If you are feeling adventurous, you can use [Chocolately](https://chocolatey.org/):
 
 ```batch
 choco install virtualbox
@@ -31,7 +31,7 @@ choco install vagrant
 There's an initial download of the Ubuntu 14.04 image and downloading other components (Docker) used in provisioning the system.
 
 ```bash
-vagrant up
+$ vagrant up
 ```
 
 ## **View Results**
