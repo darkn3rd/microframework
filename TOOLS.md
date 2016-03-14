@@ -39,10 +39,10 @@ brew bundle
 * Chocolatey: https://chocolatey.org
 
 ```batch
-## Install Chocolatey
+:: Install Chocolatey
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
 SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-## Install C++ Compilers
+:: Install C++ Compilers
 choco install visualstudiocommunity2013
 ```
 
