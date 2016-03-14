@@ -45,6 +45,8 @@ $ PORT=$(docker port ${CONTAINER_NAME} | grep '8080/tcp' | cut -d: -f2)
   * https://realpython.com/blog/python/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
 * Flask
   * http://odewahn.github.io/docker-jumpstart/example.html
+* Sinatra
+  * http://www.sinatrarb.com/configuration.html
 * Dev Environments  
   * https://docs.docker.com/opensource/project/set-up-dev-env/
   * https://docs.docker.com/compose/install/

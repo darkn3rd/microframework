@@ -1,4 +1,4 @@
-# **Sinatra WebMF*
+# **Sinatra WebMF**
 
 ## **Using on Mac OS X Host**
 
