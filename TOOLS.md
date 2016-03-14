@@ -1,4 +1,4 @@
-# **HOWTO Guide for Docker and [Vagrant](https://www.vagrantup.com)**
+# **HOWTO Guide for Docker and Vagrant**
 
 ## **Overview**
 
@@ -14,7 +14,7 @@ You can get [Docker](https://www.docker.com/) and [Vagrant](https://www.vagrantu
 
 * Windows or Mac OS X:
    * [Virtualbox](https://www.virtualbox.org/wiki/Downloads) - https://www.virtualbox.org/wiki/Downloads
-   * [Docker Toolbox](https://www.docker.com/products/docker-toolbox) ( [Windows](https://www.microsoft.com/en-us/windows) or [Mac OS X](http://www.apple.com/osx/) only) - https://www.docker.com/products/docker-toolbox
+   * [Docker Toolbox](https://www.docker.com/products/docker-toolbox) ([Windows](https://www.microsoft.com/en-us/windows) or [Mac OS X](http://www.apple.com/osx/) only) - https://www.docker.com/products/docker-toolbox
    * [Vagrant](https://www.vagrantup.com/) ([Windows](https://www.microsoft.com/en-us/windows), [Mac OS X](http://www.apple.com/osx/), [Debian](https://www.debian.org/), or [CentOS](https://www.centos.org/)) - https://www.vagrantup.com/
 * Linux:
    * *Install from Internet*: `curl -fsSL https://get.docker.com/ | sh`
@@ -38,7 +38,8 @@ choco install vagrant
 
 ### **Mac OS X**
 
-[Cask](https://caskroom.github.io/):
+Alternatively, you can use [Cask](https://caskroom.github.io/) to install some of these tools:
+
 ```bash
 # Virtualbox Components
 brew cask install virtualbox
