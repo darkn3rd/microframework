@@ -1,0 +1,2 @@
+brew "ruby"
+brew "gpg"
