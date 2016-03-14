@@ -49,7 +49,7 @@ choco install visualstudiocommunity2013
 Now with these installed, you can install packages found in `chocolate.config`:
 
 ```batch
-## Install Packages as needed
+:: Install Packages as needed
 choco install chocolate.config
 ```
 
