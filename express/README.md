@@ -19,18 +19,27 @@ EXPRESS_PORT=9090 npm start # use port 9090 instead
 
 See [Tools Readme](../TOOLS.md) for more information on install, setup, and start Docker or Vagrant.
 
-### **Build and Run with Docker Compose**
+### **Using Docker Compose**
 
 ```bash
 $ docker-compose up -d # default port of 8080
 $ WEBPORT=9090 docker-compose up -d # use port 9090 instead
 ```
 
-### **Build and Run with Vagrant**
+### **Using Vagrant**
 
 ```bash
 $ vagrant up # default port of 8080
 $ WEBPORT=9090 vagrant up # alternative port of 9090
+```
+
+### **Using Ansible Container**
+
+See [Ansible-Container Readme](ansible/README.md) for further information.
+
+```bash
+$ ansible-container build
+$ ansible-container run    # port explicitly set to 8080
 ```
 
 ## **Testing Results**
