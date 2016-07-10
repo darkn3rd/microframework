@@ -1,0 +1,15 @@
+- hosts: express
+  gather_facts: false
+  vars:
+      app_root: "/usr/src/app"
+  tasks:
+     - name: Make APP_ROOT direcotry
+       file: name="{{ app_root }}" state=directory recurse=true
+     - name: Copy Source to APP_ROOT
+       copy: src="{{ lookup('pipe','dirname `pwd`') }}/" dest="{{ app_root }}"
+     - name: Apply .dockerignore
+       shell: /bin/cat .dockerignore | /usr/bin/xargs -n 1 rm -rf
+       args:
+         chdir: "{{ app_root }}"
+     - name: NPM Install
+       npm: path="{{ app_root }}"

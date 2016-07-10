@@ -1,0 +1,12 @@
+version: '1'
+services:
+  express:
+    image: node:argon
+#    container_name: express
+    command: [ "npm", "start" ]
+    working_dir: '/usr/src/app'
+    environment:
+       EXPRESS_PORT: "8080"
+    ports:
+      - "8080:8080"
+registries: {}

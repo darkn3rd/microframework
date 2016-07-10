@@ -35,6 +35,10 @@ bin
 ################
 .vagrant
 
+# Ansible
+################
+main.retry
+
 # OS X Junk
 ################
 .DS_store
