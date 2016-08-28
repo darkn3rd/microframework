@@ -17,7 +17,7 @@ Ansible-Container is also promoting a workflow that I would term as *developer-r
 I am excited about this project, but in using the technology at its current state (July 2016), I had some poignant realizations:
 
 * `ansible-container` is excessively slow, several minutes compared to seconds with the docker toolset.
-* now layering leads to fat redundant containers
+* NO layering leads to fat redundant containers
 * playbooks can be frightfully more complex
 
 For the last point, compare the following snippets:
