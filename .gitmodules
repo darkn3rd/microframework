@@ -1,0 +1,18 @@
+[submodule "sparkjava/java"]
+	path = sparkjava/java
+	url = https://github.com/darkn3rd/webmf-java-spark.git
+[submodule "sparkjava/groovy"]
+	path = sparkjava/groovy
+	url = https://github.com/darkn3rd/webmf-groovy-spark.git
+[submodule "dancer"]
+	path = dancer
+	url = https://github.com/darkn3rd/webmf-perl-dancer.git
+[submodule "sinatra"]
+	path = sinatra
+	url = https://github.com/darkn3rd/webmf-ruby-sinatra.git
+[submodule "flask"]
+	path = flask
+	url = https://github.com/darkn3rd/webmf-python-flask.git
+[submodule "express"]
+	path = express
+	url = https://github.com/darkn3rd/webmf-node-express
